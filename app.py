@@ -23,6 +23,7 @@ import openai
 
 load_dotenv()
 
+
 app = Flask(__name__, static_folder='build')
 CORS(app)
 
@@ -42,6 +43,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 db = SQLAlchemy(app)
+
+# ... rest of your code ...
 
 
 class User(db.Model):
