@@ -28,8 +28,13 @@ CORS(app)
 
 # Use PostgreSQL in production (Railway), SQLite in development
 if os.getenv('RAILWAY_ENVIRONMENT'):
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
-        'DATABASE_URL').replace('postgres://', 'postgresql://')
+    database_url = os.getenv('DATABASE_URL')
+    if database_url:
+        app.config['SQLALCHEMY_DATABASE_URI'] = database_url.replace(
+            'postgres://', 'postgresql://')
+    else:
+        raise ValueError(
+            "DATABASE_URL is not set in the environment variables.")
 else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sales_data.db'
 
