@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import NavBar from './Components/NavBar';
+import NavBar from './components/NavBar';
 import Login from './components/Login';
 import Register from './components/Register';
 import AddSalesData from './components/AddSalesData';
