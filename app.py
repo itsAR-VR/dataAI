@@ -15,7 +15,10 @@ import openai
 load_dotenv()
 
 app = Flask(__name__, static_folder='build')
-CORS(app)
+
+CORS(app, resources={
+     r"/*": {"origins": "https://data-ai-p5ei.vercel.app/"}})
+
 
 # Database configuration
 if os.getenv('RAILWAY_ENVIRONMENT'):
