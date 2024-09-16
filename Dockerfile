@@ -7,6 +7,7 @@ WORKDIR /app
 # Install PostgreSQL client
 RUN apt-get update && apt-get install -y libpq-dev
 
+
 # Copy requirements.txt first to leverage Docker cache
 COPY requirements.txt .
 
