@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import NavBar from './Components/Navbar';
-import Login from './Components/Login';
+import NavBar from './Components/NavBar';
+import Login from './components/Login';
 import Register from './components/Register';
 import AddSalesData from './components/AddSalesData';
 import AskQuestion from './components/AskQuestion';

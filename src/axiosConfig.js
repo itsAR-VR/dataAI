@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const API_URL = 'https://your-backend-app.up.railway.app'; // Replace with your actual backend URL
+const API_URL = 'https://data-production-925b.up.railway.app/'; // Replace with your actual backend URL
 
 
 const axiosInstance = axios.create({
